@@ -1,8 +1,17 @@
 body{
   background: grey;
 }
-h1{
-text-align: center;
+h1#title{
+  font-size: 20px;
+  text-align: center;
 }
 #content{
+}
+
+ul#medium-img{
+  background: blue;
+}
+
+#small-img li, #medium-img li, #large-img li{
+  float: left;
 }

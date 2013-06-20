@@ -11,7 +11,7 @@ var util = (function(){
       }
     },
     error: function(text){
-      throw text;
+      throw text; 
     },
     
   /**
@@ -19,17 +19,16 @@ var util = (function(){
    * accepts: @url string
    * return: @success or @failure callback
    */
-    ajaxGet: function(url, success){
+    ajaxGet: function(url, success, failure){
       var req = new XMLHttpRequest();
       req.open('GET', url, true);
-      req.responseType = 'json';
       req.onreadystatechange = function(){
         if(req.readyState === 4){
           if(req.status >= 200 && req.status < 300 || req.status === 304){
-            return success(req.response);
+            return success(JSON.parse(req.response));
           }
           else{
-            return failure(req.response);
+            return failure(JSON.parse(req.response));
           }
         }
         return;
