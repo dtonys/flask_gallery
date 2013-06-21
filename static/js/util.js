@@ -25,10 +25,10 @@ var util = (function(){
       req.onreadystatechange = function(){
         if(req.readyState === 4){
           if(req.status >= 200 && req.status < 300 || req.status === 304){
-            return success(JSON.parse(req.response));
+            return success(req.response);
           }
           else{
-            return failure(JSON.parse(req.response));
+            return failure(req.response);
           }
         }
         return;

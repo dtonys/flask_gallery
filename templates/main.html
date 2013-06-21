@@ -8,14 +8,26 @@
   <script src="{{ url_for('static', filename='js/util.js') }}" type="text/javascript"></script>
   <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
 </head>
-<body>
-  <h1 id="title" >Snap Gallery</h1>
-  <button id="get_json" type="button">Get JSON</button>
-  <ul id="small-img">
-  </ul>
-  <ul id="medium-img" class="clearfix">
-  </ul>
-  <ul id="large-img">
-  </ul>
+<body class="hidden">
+  <!--<h1 id="title" >Snap Gallery</h1>-->
+  <!--<button id="get_json" type="button">Get JSON</button>-->
+  <div id="view-img">
+    <button class="next-img">next</button>
+    <button class="prev-img">prev</button>
+    <button class="get-guide" >Get Guide</button>
+    <button class="remove-guide hidden">Remove Guide</button>
+  </div>
+  <div class="slide-list">
+    <div class="small-img-wrap">
+      <p class="guide-title"></p>
+      <ul class="small-img" class="clearfix">
+      </ul>
+    </div>
+  </div>
+  <div id="guide-template" class="small-img-wrap hidden">
+    <p class="guide-title"></p>
+    <ul class="small-img" class="clearfix">
+    </ul>
+  </div>
 <body>
 </html>

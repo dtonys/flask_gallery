@@ -24,6 +24,7 @@ ol, ul {
 }
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 .clearfix:after {
   visibility: hidden;
