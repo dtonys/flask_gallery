@@ -35,6 +35,6 @@ def getGuide():
 #listen on localhost
 if __name__ == '__main__':
     app.debug = True
-    app.run(port=80)
+    app.run('0.0.0.0')
     #to listen from all computers on LAN
     #app.run('0.0.0.0')
